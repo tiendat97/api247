@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import axios from "axios";
-import redux from 'redux';
+import { connect } from "react-redux";
 
-export default class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
 
@@ -20,15 +20,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <table>
-        {this.state.persons.map(person => (         
-          <tr>      
-            <td>{person.name}</td>
-            <td>{person.email}</td>
-          </tr>
-        ))}
-      </table>
-    );
+		<div></div>
+	);
   }
-}
+}	
 
+export default connect()(App);
